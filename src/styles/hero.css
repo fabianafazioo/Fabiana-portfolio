@@ -1,0 +1,196 @@
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f6c7a1, #e9d5ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 40px;
+  gap: 50px;
+  align-items: center;
+}
+
+.hello {
+  font-style: italic;
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.hero-left h1 {
+  font-size: 80px;
+  line-height: 0.95;
+  font-weight: 900;
+  color: black;
+}
+
+.desc {
+  margin-top: 25px;
+  max-width: 420px;
+  color: black;
+}
+
+.status {
+  margin-top: 30px;
+  background: white;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: black;
+}
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.portrait-wrap {
+  position: relative;
+  perspective: 1200px;
+}
+
+.info-panel {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 80px rgba(124,58,237,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 380px;
+  width: 100%;
+  color: black;
+}
+
+.info-panel h3 {
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.info-panel a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.info-panel a:hover {
+  text-decoration: underline;
+}
+
+.panel-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.view-btn {
+  background: black;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.download-btn {
+  border: 1px solid black;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+.profile-card {
+  min-width: 320px;
+  max-width: 380px;
+  padding: 32px;
+  border-radius: 28px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  background: rgba(255,255,255,0.85);   /* ✅ makes panel readable */
+  color: black;                          /* ✅ forces ALL text black */
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  backdrop-filter: blur(18px);
+}
+
+
+.profile-card h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.role {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.card-links a svg {
+  font-size: 18px;
+}
+
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.card-buttons a {
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid black;
+}
+.view-btn {
+  background: black;
+  color: white;
+}
+
+.download-btn {
+  background: transparent;
+  color: black;
+}
+
+/* subtle hover lift */
+.profile-card:hover {
+    transition: 0.5s ease;
+}

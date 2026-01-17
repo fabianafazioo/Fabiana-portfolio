@@ -1,0 +1,139 @@
+.projects {
+  padding: 140px 0;
+  background: radial-gradient(circle at top, #f6c7a1, #e9d5ff, #ffffff);
+}
+
+
+
+.projects-inner {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+/* HEADER */
+
+.projects-title {
+  font-size: 72px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-subtitle {
+  font-size: 26px;
+  color: #7c3aed;
+  margin-top: 10px;
+}
+
+/* PROJECT SHOWCASE */
+
+.project-showcase {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT */
+
+.project-info h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: black;
+
+}
+
+.project-info p {
+  line-height: 1.7;
+  max-width: 320px;
+  color: black;
+}
+
+.tech-stack {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-stack span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-size: 12px;
+  color: black;
+}
+
+/* CENTER IMAGE */
+
+.project-image-wrap {
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.25);
+  transition: 0.6s ease;
+}
+
+.project-image-wrap img {
+  width: 100%;
+  display: block;
+}
+
+.project-image-wrap:hover {
+  transform: scale(1.03);
+}
+
+/* RIGHT */
+
+.project-actions h3 {
+  font-size: 34px;
+  color:black;
+}
+
+.project-role {
+  opacity: 0.7;
+  margin-bottom: 18px;
+  color: black;
+}
+
+.project-actions a {
+  display: inline-block;
+  margin-top: 14px;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.live-btn {
+  background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  color: white;
+}
+
+.git-btn {
+  border: 2px solid #7c3aed;
+  color: #7c3aed;
+  margin-left: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+  .project-showcase {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .project-info p {
+    margin: auto;
+  }
+
+  .project-actions a {
+    margin: 10px;
+  }
+}
