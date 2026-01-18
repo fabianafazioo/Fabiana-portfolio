@@ -12,21 +12,19 @@ export default function About() {
 
           <div className="education-card">
             <h3>Education</h3>
-            <p>
-              <strong>Bachelor of Science</strong><br />
-              Computational Science & Engineering
-            </p>
+            <ul className="edu-list">
+                <li>
+                <strong>Bachelor of Science — Computational Science & Engineering</strong><br />
+                Minor in Mathematics<br />
+                Kean University — Expected Graduation: May 2026
+                </li>
 
-            <p className="edu-sub">
-              Kean University
-            /
-              Expected Graduation May 2026.
-            </p>
-
-            <p>
-              <strong>Master’s Degree (Planned)</strong><br />
-              Starting Fall 2026 – Artificial Intelligence / Engineering focus
-            </p>
+                <li>
+                <strong>Master’s Degree (Planned)</strong><br />
+                Artificial Intelligence / Engineering Focus<br />
+                Starting Fall 2026
+                </li>
+            </ul>
           </div>
         </div>
 
@@ -54,9 +52,9 @@ export default function About() {
             <div className="skill-box">
               <h4>Programming Languages</h4>
                 <ul>
-                    <li>‣Java, JavaScript</li>
-                    <li>‣Python, R, SQL, Bash</li>
-                    <li>‣C#, C++, C</li>
+                    <li>Java, JavaScript</li>
+                    <li>Python, R, SQL, Bash</li>
+                    <li>C#, C++, C</li>
                 </ul>
 
                 
@@ -65,9 +63,9 @@ export default function About() {
             <div className="skill-box">
               <h4>Frameworks & Tools</h4>
                 <ul>
-                    <li>‣Unity, React, Node.js</li>
-                    <li>‣NumPy, Firebase, Blender</li>
-                    <li>‣GitHub, Linux, LaTeX</li>
+                    <li>Unity, React, Node.js</li>
+                    <li>NumPy, Firebase, Blender</li>
+                    <li>GitHub, Linux, LaTeX</li>
                 </ul>
 
             </div>
@@ -75,23 +73,23 @@ export default function About() {
             <div className="skill-box">
               <h4>Concepts & Technical Areas</h4>
               <ul>
-                <li>‣Object-Oriented Programming</li>
-                <li>‣Machine Learning & Deep Learning</li>
-                <li>‣3D Modeling & Simulation Systems</li>
-                <li>‣Data Augmentation & Visualization</li>
-                <li>‣Automation, Algorithms, RESTful APIs</li>
-                <li>‣Computational Modeling & Debugging</li>
+                <li>Object-Oriented Programming</li>
+                <li>Machine Learning & Deep Learning</li>
+                <li>3D Modeling & Simulation Systems</li>
+                <li>Data Augmentation & Visualization</li>
+                <li>Automation, Algorithms, RESTful APIs</li>
+                <li>Computational Modeling & Debugging</li>
               </ul>
             </div>
 
             <div className="skill-box">
               <h4>Professional Strengths</h4>
               <ul>
-                <li>‣Team Collaboration</li>
-                <li>‣Analytical Thinker</li>
-                <li>‣Detail-Oriented</li>
-                <li>‣Rapid Learner</li>
-                <li>‣Bilingual: English & Spanish</li>
+                <li>Team Collaboration</li>
+                <li>Analytical Thinker</li>
+                <li>Detail-Oriented</li>
+                <li>Rapid Learner</li>
+                <li>Bilingual: English & Spanish</li>
               </ul>
             </div>
 
