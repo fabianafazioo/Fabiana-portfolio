@@ -111,7 +111,7 @@
 }
 
 .skill-box ul {
-  list-style: none;
+  list-style: disc;
   padding-left: 16px;
   font-size: 14px;
   line-height: 1.6;
