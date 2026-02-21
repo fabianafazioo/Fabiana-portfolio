@@ -76,8 +76,7 @@ export default function Projects() {
             <p>
               Fluid Simulation Recreation Study created in Blender (then tested in a
               real-time pipeline). This was an experimental demo to practice water
-              dynamics, surface shading, and simulation parameter tuning. The scene
-              concept is inspired by a YouTube tutorial; recreation and results are my
+              dynamics, surface shading, and simulation parameter tuning. Recreation and results are my
               own technical study.
             </p>
 
@@ -89,7 +88,7 @@ export default function Projects() {
             </div>
 
             <p className="project-note">
-              <strong>Credit:</strong> Inspired by a YouTube demo (credited in the project write-up).
+              <strong>Credit:</strong> Inspired by a YouTube demo.
             </p>
           </div>
 
@@ -109,7 +108,7 @@ export default function Projects() {
           {/* RIGHT ACTIONS */}
           <div className="project-actions">
             <h3>Fluid Simulation Study</h3>
-            <p className="project-role">Blender Water Dynamics (Recreation Study)</p>
+            <p className="project-role">Blender Water Dynamics</p>
 
             {/* Optional: still include a link for details instead of "Live Demo" */}
             {/* If you have a YouTube upload of YOUR render, link it here */}
