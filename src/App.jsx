@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import CursorGlow from "./components/CursorGlow";
 import TapGlow from "./components/TapGlow";
 import ChatWidget from "./components/ChatWidget";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <CursorGlow />
       <TapGlow />
       <ChatWidget />
+      <Footer />
     </>
   );
 }
