@@ -1,6 +1,54 @@
 import "../styles/projects.css";
-import fluidVid from "../assets/fluid-demo.mp4";
+import fluidVid1 from "../assets/fluid-demo.mp4";
+import fluidVid2 from "../assets/fluid-demo-2.mov";
+import { useMemo, useState } from "react";
 
+function FluidVideoSlider() {
+  const videos = useMemo(() => [fluidVid1, fluidVid2], []);
+  const [idx, setIdx] = useState(0);
+
+  function prev() {
+    setIdx((i) => (i - 1 + videos.length) % videos.length);
+  }
+
+  function next() {
+    setIdx((i) => (i + 1) % videos.length);
+  }
+
+  return (
+    <div className="project-image-wrap fluid-slider" aria-label="Fluid simulation videos">
+      <video
+        key={videos[idx]}              // forces reload when switching
+        className="project-video"
+        src={videos[idx]}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      />
+
+      <button className="fluid-nav fluid-prev" onClick={prev} aria-label="Previous video">
+        ‹
+      </button>
+
+      <button className="fluid-nav fluid-next" onClick={next} aria-label="Next video">
+        ›
+      </button>
+
+      <div className="fluid-dots" aria-label="Video position">
+        {videos.map((_, i) => (
+          <button
+            key={i}
+            className={`fluid-dot ${i === idx ? "is-active" : ""}`}
+            onClick={() => setIdx(i)}
+            aria-label={`Go to video ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 export default function Projects() {
   return (
     <section className="projects" id="projects">
@@ -119,18 +167,9 @@ export default function Projects() {
           </div>
 
           {/* CENTER VIDEO */}
+          {/* CENTER VIDEO (2-video slider) */}
           <div className="project-media">
-            <div className="project-image-wrap">
-              <video
-                className="project-video"
-                src={fluidVid}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-              />
-            </div>
+            <FluidVideoSlider />
           </div>
 
           {/* RIGHT ACTIONS */}
