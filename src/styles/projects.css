@@ -337,8 +337,12 @@
   background: rgba(124,58,237,0.95);
   border-color: rgba(124,58,237,0.95);
 }
-
-/* optional: show controls only on hover (nice) */
+.project-image-wrap .fluid-nav,
+.project-image-wrap .fluid-dots {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* optional: show controls only on hover (nice)
 .project-image-wrap .fluid-nav,
 .project-image-wrap .fluid-dots {
   opacity: 0;
@@ -351,3 +355,4 @@
   opacity: 1;
   pointer-events: auto;
 }
+*/
