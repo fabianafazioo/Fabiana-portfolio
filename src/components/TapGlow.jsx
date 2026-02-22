@@ -3,21 +3,38 @@ import "../styles/tapglow.css";
 
 export default function TapGlow() {
   useEffect(() => {
-    const createRipple = (e) => {
-      // Only run on mobile-like devices
-      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-
+    const createRipple = (x, y) => {
       const ripple = document.createElement("span");
       ripple.className = "tap-ripple";
-      ripple.style.left = `${e.clientX}px`;
-      ripple.style.top = `${e.clientY}px`;
+
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
 
       document.body.appendChild(ripple);
-      window.setTimeout(() => ripple.remove(), 700);
+      setTimeout(() => ripple.remove(), 700);
     };
 
-    window.addEventListener("pointerdown", createRipple, { passive: true });
-    return () => window.removeEventListener("pointerdown", createRipple);
+    // 🔥 Touch support (MOST important for phones)
+    const handleTouch = (e) => {
+      const touch = e.touches?.[0];
+      if (!touch) return;
+      createRipple(touch.clientX, touch.clientY);
+    };
+
+    // Pointer support (modern browsers)
+    const handlePointer = (e) => {
+      // ignore mouse on desktop
+      if (e.pointerType === "mouse") return;
+      createRipple(e.clientX, e.clientY);
+    };
+
+    window.addEventListener("touchstart", handleTouch, { passive: true });
+    window.addEventListener("pointerdown", handlePointer, { passive: true });
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouch);
+      window.removeEventListener("pointerdown", handlePointer);
+    };
   }, []);
 
   return null;

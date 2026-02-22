@@ -1,15 +1,15 @@
 .tap-ripple{
   position: fixed;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 999px;
   pointer-events: none;
   z-index: 99999;
 
   background: radial-gradient(
     circle,
-    rgba(124,58,237,0.60) 0%,
-    rgba(124,58,237,0.30) 45%,
+    rgba(124,58,237,0.75) 0%,
+    rgba(124,58,237,0.45) 40%,
     transparent 70%
   );
 
@@ -22,9 +22,4 @@
     transform: translate(-50%, -50%) scale(18);
     opacity: 0;
   }
-}
-
-/* Desktop: hide ripple (tap glow is for mobile) */
-@media (hover: hover) and (pointer: fine){
-  .tap-ripple{ display:none; }
 }
