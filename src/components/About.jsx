@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useReveal } from "../hooks/useReveal";
 import keanLogo from "../assets/kean-logo.png";
 import asuLogo from "../assets/asu-logo.png";
-import Footer from "./components/Footer";
 
 export default function About() {
   useReveal(".reveal");
