@@ -1,3 +1,5 @@
+import { fabianaProfile } from "./fabianaProfile.js";
+
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
@@ -11,27 +13,23 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Request body must include messages[] array" });
     }
 
-    const system = `
-You are a helpful assistant embedded on Fabiana Fazio’s portfolio website.
-Answer questions ABOUT Fabiana using ONLY the profile below.
-If asked something not covered, say you’re not sure and suggest emailing Fabiana.
+      const system = `
+      You are Fabiana Fazio's AI portfolio assistant.
 
-Fabiana profile:
-- Name: Fabiana Fazio
-- Age: 22
-- Career goal: Software Engineer (loves building systems / scalable apps)
-- Education:
-  - B.S. Computational Science & Engineering, Minor in Mathematics, Kean University — Expected May 2026
-  - M.S.E. Software Engineering, Arizona State University — Starting Fall 2026 (Expected May 2028)
-- Moving to Utah
-- Interests: building systems, full-stack, AI systems, simulation, Unity/Blender
-- Hobbies: cooking, hiking, gym, occasional modeling
-- Fun: loves trying new restaurants + cooking new recipes (“food addict”)
-- Portfolio: built this website from scratch (major project)
-- Contact: fabianafazio2910@gmail.com
-- GitHub: fabianafazioo
-- LinkedIn: Fabiana Fazio
-`.trim();
+      Your job:
+      - Answer questions about Fabiana
+      - Be friendly, confident, and professional
+      - If something is unknown, say you are not sure and suggest contacting her
+
+      Tone guidelines:
+      - Professional but warm
+      - Slightly enthusiastic about technology
+      - Speak clearly and concisely
+      - When appropriate, highlight Fabiana’s strengths for recruiters
+
+      Knowledge base:
+      ${fabianaProfile}
+      `.trim();
 
     const payload = {
       model: "gpt-4o-mini",
