@@ -3,16 +3,17 @@
   background: radial-gradient(circle at top, #f6c7a1, #e9d5ff, #ffffff);
 }
 
-
-
 .projects-inner {
   max-width: 1300px;
   margin: auto;
   padding: 0 40px;
 }
 
-/* HEADER */
+.projects-header{
+  text-align: left;
+}
 
+/* HEADER */
 .projects-title {
   font-size: 72px;
   font-weight: 900;
@@ -23,39 +24,48 @@
 }
 
 .projects-subtitle {
-  font-size: 26px;
+  font-size: 22px;
   color: #7c3aed;
   margin-top: 10px;
 }
 
 /* PROJECT SHOWCASE */
-
 .project-showcase {
-  margin-top: 80px;
+  margin-top: 70px;
   display: grid;
-  grid-template-columns: 1fr 1.6fr 1fr;
-  gap: 40px;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 520px) minmax(240px, 1fr);
+  gap: 44px;
   align-items: center;
 }
 
-/* LEFT */
+.project-info, .project-actions{
+  text-align: left;
+}
 
+/* LEFT */
 .project-info h4 {
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 12px;
   color: black;
-
 }
 
 .project-info p {
   line-height: 1.7;
-  max-width: 320px;
+  max-width: 440px;
   color: black;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
+.project-note{
+  margin-top: 12px;
+  color: rgba(0,0,0,0.75);
+}
+
+/* TECH TAGS */
 .tech-stack {
-  margin-top: 20px;
+  margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -70,34 +80,40 @@
   color: black;
 }
 
-/* CENTER IMAGE */
+/* CENTER MEDIA */
+.project-media{
+  display: flex;
+  justify-content: center;
+}
 
 .project-image-wrap {
+  width: 100%;
   border-radius: 26px;
   overflow: hidden;
   box-shadow: 0 40px 90px rgba(0,0,0,0.25);
-  transition: 0.6s ease;
+  transition: 0.35s ease;
+  aspect-ratio: 16 / 9;
+  background: rgba(255,255,255,0.65);
 }
 
-.project-image-wrap img {
+.project-image-wrap:hover { transform: scale(1.02); }
+
+.project-video {
   width: 100%;
+  height: 100%;
   display: block;
-}
-
-.project-image-wrap:hover {
-  transform: scale(1.03);
+  object-fit: cover;
 }
 
 /* RIGHT */
-
 .project-actions h3 {
   font-size: 34px;
-  color:black;
+  color: black;
 }
 
 .project-role {
-  opacity: 0.7;
-  margin-bottom: 18px;
+  opacity: 0.75;
+  margin-bottom: 16px;
   color: black;
 }
 
@@ -107,7 +123,7 @@
   text-decoration: none;
   padding: 12px 22px;
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .live-btn {
@@ -119,37 +135,148 @@
   border: 2px solid #7c3aed;
   color: #7c3aed;
   margin-left: 10px;
+  background: transparent;
 }
 
-/* MOBILE */
+/* =========================
+   iPhone 17-style frame
+   ========================= */
+.iphone-frame{
+  width: min(350px, 100%);
+  aspect-ratio: 9 / 19.5; /* phone-ish */
+  position: relative;
+  border-radius: 44px;
+  padding: 9px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.78), rgba(0,0,0,0.92));
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.28),
+    0 10px 26px rgba(0,0,0,0.18);
+}
 
-@media (max-width: 1000px) {
+.iphone-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background: #000;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* notch */
+.iphone-notch{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52%;
+  height: 34px;
+  border-radius: 0 0 22px 22px;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 4;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.iphone-speaker{
+  width: 48px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+}
+
+.iphone-camera{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.22);
+}
+
+/* screen */
+.iphone-screen{
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.iphone-screen iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #000;
+  z-index: 2;
+}
+
+/* fallback behind iframe */
+.iphone-fallback{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap: 14px;
+  padding: 20px;
+  text-align:center;
+  color: rgba(255,255,255,0.92);
+  z-index: 1;
+}
+.iphone-fallback p{
+  max-width: 240px;
+  line-height: 1.5;
+}
+
+/* home indicator */
+.iphone-home-indicator{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.20);
+  z-index: 4;
+}
+
+/* side buttons (decorative) */
+.iphone-btn, .iphone-power{
+  position:absolute;
+  width: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.20);
+}
+
+.iphone-btn-top{ left: -3px; top: 90px; height: 32px; }
+.iphone-btn-mid{ left: -3px; top: 140px; height: 52px; }
+.iphone-btn-bot{ left: -3px; top: 205px; height: 52px; }
+
+.iphone-power{ right: -3px; top: 150px; height: 78px; }
+
+/* MOBILE */
+@media (max-width: 1050px) {
   .project-showcase {
     grid-template-columns: 1fr;
+    gap: 26px;
     text-align: center;
   }
 
-  .project-info p {
-    margin: auto;
+  .projects-header{ text-align: center; }
+
+  .project-info, .project-actions{
+    text-align: center;
   }
 
-  .project-actions a {
-    margin: 10px;
+  .project-info p{
+    margin: 0 auto;
   }
-}
-.project-video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;       /* fills nicely like an image */
-  border-radius: 14px;     /* match your aesthetic */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-}
 
-/* If your .project-image-wrap doesn’t have a fixed size,
-   this helps keep the video from being too tall/short. */
-.project-image-wrap {
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 14px;
+  .git-btn{
+    margin-left: 0;
+  }
 }

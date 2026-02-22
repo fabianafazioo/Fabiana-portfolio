@@ -194,3 +194,9 @@
 .profile-card:hover {
     transition: 0.5s ease;
 }
+.hero-cta{
+  margin-top: 22px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,5 @@
 import "../styles/projects.css";
-import goalImg from "../assets/Goaltracker.png";
-import fluidVid from "../assets/fluid-demo.mp4"; // <-- add your mp4 here
+import fluidVid from "../assets/fluid-demo.mp4";
 
 export default function Projects() {
   return (
@@ -36,12 +35,39 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* CENTER IMAGE */}
-          <div className="project-image-wrap">
-            <img src={goalImg} alt="Goal Tracker Project" />
+         {/* CENTER: iPhone frame with interactive demo */}
+          <div className="project-media">
+            <div className="iphone-frame">
+              <div className="iphone-inner">
+                {/* notch */}
+                <div className="iphone-notch">
+                  <div className="iphone-speaker" />
+                  <div className="iphone-camera" />
+                </div>
+
+                {/* screen */}
+                <div className="iphone-screen">
+                  <iframe
+                    title="Goal Tracker Embedded Demo"
+                    src="https://goaltracker-web.vercel.app/login"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* home indicator */}
+                <div className="iphone-home-indicator" />
+              </div>
+
+              {/* side buttons (decorative) */}
+              <span className="iphone-btn iphone-btn-top" />
+              <span className="iphone-btn iphone-btn-mid" />
+              <span className="iphone-btn iphone-btn-bot" />
+              <span className="iphone-power" />
+            </div>
           </div>
 
-          {/* RIGHT ACTIONS */}
+          {/* RIGHT ACTIONS (keep your buttons) */}
           <div className="project-actions">
             <h3>Goal Tracker</h3>
             <p className="project-role">Collaborative Goal Management Web App</p>
@@ -93,16 +119,18 @@ export default function Projects() {
           </div>
 
           {/* CENTER VIDEO */}
-          <div className="project-image-wrap">
-            <video
-              className="project-video"
-              src={fluidVid}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-            />
+          <div className="project-media">
+            <div className="project-image-wrap">
+              <video
+                className="project-video"
+                src={fluidVid}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+              />
+            </div>
           </div>
 
           {/* RIGHT ACTIONS */}
@@ -110,8 +138,6 @@ export default function Projects() {
             <h3>Fluid Simulation Study</h3>
             <p className="project-role">Blender Water Dynamics</p>
 
-            {/* Optional: still include a link for details instead of "Live Demo" */}
-            {/* If you have a YouTube upload of YOUR render, link it here */}
             <a
               href="#projects"
               className="live-btn"
@@ -120,9 +146,6 @@ export default function Projects() {
             >
               Embedded Video ✓
             </a>
-
-            {/* Optional: link to a short write-up page if you have it */}
-            {/* <a href="/fluid-study" className="git-btn">Project Notes ↗</a> */}
           </div>
         </div>
       </div>
