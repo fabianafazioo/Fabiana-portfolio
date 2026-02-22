@@ -43,19 +43,19 @@ ${message}`
               <FaEnvelope /> Email Me
             </a>
 
-            <a href="/resume.pdf" target="_blank" rel="noreferrer">
+            <a href="/FabianaFazioResume.pdf" target="_blank" rel="noreferrer">
               <FaFileAlt /> View Resume
             </a>
 
-            <a href="/resume.pdf" download>
+            <a href="/FabianaFazioResume.pdf" download>
               <FaFileDownload /> Download Resume
             </a>
 
-            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/fabiana-fazioo" target="_blank" rel="noreferrer">
               <FaLinkedin /> LinkedIn
             </a>
 
-            <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noreferrer">
+            <a href="https://github.com/fabianafazioo" target="_blank" rel="noreferrer">
               <FaGithub /> GitHub
             </a>
           </div>
