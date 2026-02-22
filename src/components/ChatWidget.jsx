@@ -1,11 +1,34 @@
 import { useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import "../styles/chatwidget.css";
 
 const STARTER = {
   role: "assistant",
   content:
-    "Hi! I’m Fabiana’s assistant 💜 Ask me anything about her background, projects, skills, or education.",
+    "Hi! I’m Fabiana’s assistant 💜\n\nAsk me anything about her **skills**, **projects**, **research**, or **availability**.",
 };
+
+function MarkdownMessage({ content }) {
+  return (
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      components={{
+        a: (props) => <a {...props} target="_blank" rel="noreferrer" />,
+        code: ({ inline, className, children, ...props }) => {
+          if (inline) return <code className="md-inlinecode" {...props}>{children}</code>;
+          return (
+            <pre className="md-pre">
+              <code className={className} {...props}>{children}</code>
+            </pre>
+          );
+        },
+      }}
+    >
+      {content}
+    </ReactMarkdown>
+  );
+}
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(true);
@@ -16,7 +39,6 @@ export default function ChatWidget() {
   const listRef = useRef(null);
 
   useEffect(() => {
-    // auto-scroll to bottom
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, open]);
 
@@ -41,18 +63,17 @@ export default function ChatWidget() {
 
       setMessages([...next, { role: "assistant", content: data.reply }]);
     } catch (e) {
-        setMessages([
-            ...next,
-            {
-            role: "assistant",
-            content:
-                `I couldn’t reach the chat service. Error: ${e.message || "unknown"}`,
-            },
-        ]);
-        console.error(e);
-        } finally {
-        setLoading(false);
-        }
+      setMessages([
+        ...next,
+        {
+          role: "assistant",
+          content: `I couldn’t reach the chat service.\n\n**Error:** ${e.message || "unknown"}`,
+        },
+      ]);
+      console.error(e);
+    } finally {
+      setLoading(false);
+    }
   }
 
   function onKeyDown(e) {
@@ -72,20 +93,28 @@ export default function ChatWidget() {
               Ask about Fabiana
             </div>
 
-            <button className="chatfab-iconbtn" onClick={() => setOpen(false)} aria-label="Minimize chat">
+            <button
+              className="chatfab-iconbtn"
+              onClick={() => setOpen(false)}
+              aria-label="Minimize chat"
+            >
               —
             </button>
           </div>
 
           <div className="chatfab-body" ref={listRef}>
             {messages.map((m, idx) => (
-              <div
-                key={idx}
-                className={`chatfab-msg ${m.role === "user" ? "is-user" : "is-bot"}`}
-              >
-                <div className="chatfab-bubble">{m.content}</div>
+              <div key={idx} className={`chatfab-msg ${m.role === "user" ? "is-user" : "is-bot"}`}>
+                <div className="chatfab-bubble">
+                  {m.role === "assistant" ? (
+                    <MarkdownMessage content={m.content} />
+                  ) : (
+                    m.content
+                  )}
+                </div>
               </div>
             ))}
+
             {loading && (
               <div className="chatfab-msg is-bot">
                 <div className="chatfab-bubble chatfab-typing">Typing…</div>
@@ -108,8 +137,7 @@ export default function ChatWidget() {
         </div>
       ) : (
         <button className="chatfab-mini" onClick={() => setOpen(true)} aria-label="Open chat">
-          💬
-          <span>Ask about Fabiana</span>
+          💬 <span>Ask about Fabiana</span>
         </button>
       )}
     </div>
