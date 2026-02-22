@@ -1,30 +1,31 @@
 import "../styles/about.css";
 import aboutPic from "../assets/me.png";
 import { useState } from "react";
-
+import { useReveal } from "../hooks/useReveal";
+import keanLogo from "../assets/kean-logo.png";
+import asuLogo from "../assets/asu-logo.png";
 
 export default function About() {
+  useReveal(".reveal");
+
   const [tiltStyle, setTiltStyle] = useState({});
   const [glowStyle, setGlowStyle] = useState({});
 
   function handleTilt(e) {
     const el = e.currentTarget;
     const r = el.getBoundingClientRect();
-
     const x = e.clientX - r.left;
     const y = e.clientY - r.top;
 
-    // rotate strength (lower = more subtle)
-    const rotateY = ((x / r.width) - 0.5) * 14; // left/right
-    const rotateX = ((y / r.height) - 0.5) * -14; // up/down
+    const rotateY = ((x / r.width) - 0.5) * 14;
+    const rotateX = ((y / r.height) - 0.5) * -14;
 
     setTiltStyle({
       transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`,
     });
 
-    // glow follows cursor
     setGlowStyle({
-      background: `radial-gradient(circle at ${x}px ${y}px, rgba(124,58,237,0.35), transparent 55%)`,
+      background: `radial-gradient(circle at ${x}px ${y}px, rgba(124,58,237,0.38), transparent 55%)`,
       opacity: 1,
     });
   }
@@ -33,6 +34,34 @@ export default function About() {
     setTiltStyle({ transform: "rotateX(0deg) rotateY(0deg) translateY(0px)" });
     setGlowStyle({ opacity: 0 });
   }
+
+  const skillGroups = [
+    {
+      title: "Languages",
+      items: ["Java", "JavaScript", "Python", "SQL", "R", "Bash", "C#", "C++", "C"],
+    },
+    {
+      title: "Frameworks & Tools",
+      items: ["React", "Node.js", "Firebase", "Unity", "Blender", "NumPy", "Git", "Linux", "LaTeX"],
+    },
+    {
+      title: "Focus Areas",
+      items: [
+        "AI Systems",
+        "VR / Immersive Research",
+        "Simulation",
+        "Data Visualization",
+        "Automation",
+        "APIs",
+        "Algorithms",
+        "OOP",
+      ],
+    },
+    {
+      title: "Strengths",
+      items: ["Team Collaboration", "Analytical Thinking", "Detail-Oriented", "Rapid Learner", "Bilingual (EN/ES)"],
+    },
+  ];
 
   return (
     <section className="about" id="about">
@@ -51,97 +80,104 @@ export default function About() {
             <div className="persona-shine" />
           </div>
 
-          <div className="education-card">
-            <h3>Education</h3>
-            <ul className="edu-list">
-              <li>
-                <strong>Bachelor of Science — Computational Science & Engineering</strong>
-                <br />
-                Minor in Mathematics
-                <br />
-                Kean University — Expected Graduation: May 2026
-              </li>
+          {/* EDUCATION */}
+          <div className="education-card reveal" data-reveal="left" style={{ "--reveal-delay": "120ms" }}>
+            <div className="edu-header">
+              <h3>Education</h3>
+              <span className="edu-badge">Academic Timeline</span>
+            </div>
 
-              <li>
-                <strong>Master’s Degree (Planned)</strong>
-                <br />
-                Artificial Intelligence / Engineering Focus
-                <br />
-                Starting Fall 2026
-              </li>
-            </ul>
+            <div className="edu-timeline">
+              {/* Kean */}
+              <div className="edu-item">
+                <div className="edu-dot" />
+                <div className="edu-school-card">
+                  <div className="edu-top">
+                    <img src={keanLogo} alt="Kean University" className="edu-logo" />
+                    <div className="edu-top-text">
+                      <div className="edu-school">Kean University</div>
+                      <div className="edu-date">Expected May 2026</div>
+                    </div>
+                  </div>
+
+                  <div className="edu-degree">
+                    <strong>B.S. — Computational Science & Engineering</strong>
+                  </div>
+                  <div className="edu-sub">Minor: Mathematical Science</div>
+                </div>
+              </div>
+
+              {/* ASU */}
+              <div className="edu-item">
+                <div className="edu-dot" />
+                <div className="edu-school-card">
+                  <div className="edu-top">
+                    <img src={asuLogo} alt="Arizona State University" className="edu-logo" />
+                    <div className="edu-top-text">
+                      <div className="edu-school">Arizona State University</div>
+                      <div className="edu-date">Starting Fall 2026 • Expected May 2028</div>
+                    </div>
+                  </div>
+
+                  <div className="edu-degree">
+                    <strong>M.S.E. — Software Engineering (Planned)</strong>
+                  </div>
+                  <div className="edu-sub">
+                    Focus: advanced software systems, scalable development
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* RIGHT SIDE */}
         <div className="about-right">
-          <h2>About Me</h2>
+          <h2 className="reveal" data-reveal="right" style={{ "--reveal-delay": "0ms" }}>
+            About Me
+          </h2>
 
-          <p className="about-text">
-            I’m a software engineer and researcher passionate about building intelligent,
-            immersive, and scalable systems. My work sits at the intersection of software
-            engineering, artificial intelligence, and computational modeling — from VR
-            simulation environments to data-driven and AI-powered applications.
+          <p className="about-text reveal" data-reveal="right" style={{ "--reveal-delay": "140ms" }}>
+            I am an aspiring software engineer driven by a passion for building intelligent, scalable,
+            and visually engaging systems. My experience ranges from full-stack web applications to AI-focused
+            and simulation-based projects, where I focus on writing clean, reliable code and delivering solutions
+            that create real value. I thrive in environments that challenge me to learn quickly, think critically,
+            and turn complex ideas into working software.
           </p>
 
-          <p className="about-text">
-            I have hands-on experience developing full software systems, conducting technical
-            research, and working in interdisciplinary environments where engineering, data,
-            and design meet. I’m driven by solving complex problems, learning rapidly, and
-            building technology that has real-world impact.
+          <p className="about-text reveal" data-reveal="right" style={{ "--reveal-delay": "280ms" }}>
+            With my upcoming Master’s studies in Software Engineering at Arizona State University, I am excited to expand
+            my knowledge in advanced software development, machine learning, and high-performance systems. I am currently
+            seeking software engineering opportunities where I can contribute to impactful projects, continue growing as
+            an engineer, and collaborate with teams that value innovation, ownership, and technical excellence.
           </p>
 
-          {/* KEEP your skills grid for now (Part 7 will upgrade it more) */}
-          <div className="skills-grid">
-            <div className="skill-box">
-              <h4>Programming Languages</h4>
-              <ul>
-                <li>Java, JavaScript</li>
-                <li>Python, R, SQL, Bash</li>
-                <li>C#, C++, C</li>
-              </ul>
+          <div className="about-highlights reveal" data-reveal="right" style={{ "--reveal-delay": "360ms" }}>
+            <div className="highlight">🚀 Seeking: Software Engineering roles</div>
+            <div className="highlight">🧠 Focus: AI systems + scalable apps</div>
+            <div className="highlight">🎓 Next: M.S.E. at ASU (Fall 2026)</div>
+          </div>
+
+          {/* SKILLS */}
+          <div className="skills-section reveal" data-reveal="right" style={{ "--reveal-delay": "420ms" }}>
+            <h3 className="skills-title">Skills Snapshot</h3>
+
+            <div className="skills-groups">
+              {skillGroups.map((g) => (
+                <div className="skills-group" key={g.title}>
+                  <div className="skills-group-title">{g.title}</div>
+                  <div className="skills-pills">
+                    {g.items.map((s) => (
+                      <span className="skill-pill" key={s}>
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="skill-box">
-              <h4>Frameworks & Tools</h4>
-              <ul>
-                <li>Unity, React, Node.js</li>
-                <li>NumPy, Firebase, Blender</li>
-                <li>GitHub, Linux, LaTeX</li>
-              </ul>
-            </div>
-
-            <div className="skill-box">
-              <h4>Concepts & Technical Areas</h4>
-              <ul>
-                <li>Object-Oriented Programming</li>
-                <li>Machine Learning & Deep Learning</li>
-                <li>3D Modeling & Simulation Systems</li>
-                <li>Data Augmentation & Visualization</li>
-                <li>Automation, Algorithms, RESTful APIs</li>
-                <li>Computational Modeling & Debugging</li>
-              </ul>
-            </div>
-
-            <div className="skill-box">
-              <h4>Professional Strengths</h4>
-              <ul>
-                <li>Team Collaboration</li>
-                <li>Analytical Thinker</li>
-                <li>Detail-Oriented</li>
-                <li>Rapid Learner</li>
-                <li>Bilingual: English & Spanish</li>
-              </ul>
-            </div>
-
-            <div className="skill-box">
-              <h4>Certifications</h4>
-              <ul>
-                <li>CITI Program</li>
-                <li>Responsible Conduct of Research</li>
-                <li>ID: 12114301</li>
-              </ul>
-            </div>
+            <div className="skills-footnote">Tip: hover a skill ✨</div>
           </div>
         </div>
       </div>
