@@ -1,18 +1,24 @@
 .footer {
-  width: 100%;
-  padding: 50px 20px;
-  background: transparent; /* keeps your gradient background */
-  margin-top: 80px;
+  width: 100% !important;
+  /* Reduced from 50px to 15px to make it very thin */
+  padding: 15px 0 !important; 
+  
+  /* Force it to be transparent so the site background shows through */
+  background:  rgb(252, 251, 243);
+ 
+
 }
 
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
-
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-
-  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Modern, thin text */
+  font-size: 12px;
+  font-weight: 300; 
+  letter-spacing: 0.5px;
+  color: black; /* Faint grey-white */
 }

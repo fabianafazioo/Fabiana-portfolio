@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        Fabiana Fazio
+        <span>Fabiana Fazio &copy; 2026</span>
       </div>
     </footer>
   );
