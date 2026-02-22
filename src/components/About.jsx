@@ -1,29 +1,74 @@
 import "../styles/about.css";
-import aboutPic from "../assets/me.png"; // put your image here
+import aboutPic from "../assets/me.png";
+import { useState } from "react";
+
 
 export default function About() {
+  const [tiltStyle, setTiltStyle] = useState({});
+  const [glowStyle, setGlowStyle] = useState({});
+
+  function handleTilt(e) {
+    const el = e.currentTarget;
+    const r = el.getBoundingClientRect();
+
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+
+    // rotate strength (lower = more subtle)
+    const rotateY = ((x / r.width) - 0.5) * 14; // left/right
+    const rotateX = ((y / r.height) - 0.5) * -14; // up/down
+
+    setTiltStyle({
+      transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`,
+    });
+
+    // glow follows cursor
+    setGlowStyle({
+      background: `radial-gradient(circle at ${x}px ${y}px, rgba(124,58,237,0.35), transparent 55%)`,
+      opacity: 1,
+    });
+  }
+
+  function resetTilt() {
+    setTiltStyle({ transform: "rotateX(0deg) rotateY(0deg) translateY(0px)" });
+    setGlowStyle({ opacity: 0 });
+  }
+
   return (
     <section className="about" id="about">
       <div className="about-inner">
-
         {/* LEFT SIDE */}
         <div className="about-left">
-          <img src={aboutPic} alt="Fabiana Fazio" className="about-img" />
+          {/* Interactive Persona Card */}
+          <div
+            className="persona-card"
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
+            style={tiltStyle}
+          >
+            <img src={aboutPic} alt="Fabiana Fazio" className="about-img" />
+            <div className="persona-glow" style={glowStyle} />
+            <div className="persona-shine" />
+          </div>
 
           <div className="education-card">
             <h3>Education</h3>
             <ul className="edu-list">
-                <li>
-                <strong>Bachelor of Science — Computational Science & Engineering</strong><br />
-                Minor in Mathematics<br />
+              <li>
+                <strong>Bachelor of Science — Computational Science & Engineering</strong>
+                <br />
+                Minor in Mathematics
+                <br />
                 Kean University — Expected Graduation: May 2026
-                </li>
+              </li>
 
-                <li>
-                <strong>Master’s Degree (Planned)</strong><br />
-                Artificial Intelligence / Engineering Focus<br />
+              <li>
+                <strong>Master’s Degree (Planned)</strong>
+                <br />
+                Artificial Intelligence / Engineering Focus
+                <br />
                 Starting Fall 2026
-                </li>
+              </li>
             </ul>
           </div>
         </div>
@@ -46,28 +91,24 @@ export default function About() {
             building technology that has real-world impact.
           </p>
 
-          {/* SKILLS GRID */}
+          {/* KEEP your skills grid for now (Part 7 will upgrade it more) */}
           <div className="skills-grid">
-
             <div className="skill-box">
               <h4>Programming Languages</h4>
-                <ul>
-                    <li>Java, JavaScript</li>
-                    <li>Python, R, SQL, Bash</li>
-                    <li>C#, C++, C</li>
-                </ul>
-
-                
+              <ul>
+                <li>Java, JavaScript</li>
+                <li>Python, R, SQL, Bash</li>
+                <li>C#, C++, C</li>
+              </ul>
             </div>
 
             <div className="skill-box">
               <h4>Frameworks & Tools</h4>
-                <ul>
-                    <li>Unity, React, Node.js</li>
-                    <li>NumPy, Firebase, Blender</li>
-                    <li>GitHub, Linux, LaTeX</li>
-                </ul>
-
+              <ul>
+                <li>Unity, React, Node.js</li>
+                <li>NumPy, Firebase, Blender</li>
+                <li>GitHub, Linux, LaTeX</li>
+              </ul>
             </div>
 
             <div className="skill-box">
@@ -101,10 +142,8 @@ export default function About() {
                 <li>ID: 12114301</li>
               </ul>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
   );

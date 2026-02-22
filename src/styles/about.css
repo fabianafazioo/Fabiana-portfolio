@@ -27,7 +27,7 @@
   max-width: 420px;
   border-radius: 28px;
   object-fit: cover;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  /*box-shadow: 0 30px 80px rgba(0,0,0,0.45);*/
 }
 
 .education-card {
@@ -41,7 +41,64 @@
     0 20px 50px rgba(124,58,237,0.15),
     0 5px 15px rgba(0,0,0,0.08);
 }
+/* =========
+   Persona interactive card (tilt + glow)
+   ========= */
+.persona-card{
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 28px;
+  overflow: hidden;
 
+  transform-style: preserve-3d;
+  transition: transform 220ms ease;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+}
+
+.persona-card img{
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  transform: translateZ(20px);
+}
+
+/* glow follows cursor */
+.persona-glow{
+  position: absolute;
+  inset: -30%;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* subtle “glass shine” sweep */
+.persona-shine{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.22) 18%,
+    transparent 36%
+  );
+  transform: translateX(-65%);
+  transition: transform 600ms ease;
+  opacity: 0.65;
+}
+
+.persona-card:hover .persona-shine{
+  transform: translateX(65%);
+}
+
+/* Mobile: disable tilt behavior nicely */
+@media (max-width: 900px){
+  .persona-card{
+    transform: none !important;
+  }
+}
 /* Education content */
 
 .education-card h3 {
@@ -139,4 +196,19 @@
     margin-left: auto;
     margin-right: auto;
   }
+}
+/* ===== subtle floating ===== */
+@keyframes personaFloat {
+  0%   { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+  50%  { transform: translateY(-6px) rotateX(0deg) rotateY(0deg); }
+  100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+}
+
+.persona-card{
+  animation: personaFloat 5.5s ease-in-out infinite;
+}
+
+/* pause float while user is interacting */
+.persona-card:hover{
+  animation-play-state: paused;
 }

@@ -142,11 +142,11 @@
    iPhone 17-style frame
    ========================= */
 .iphone-frame{
-  width: min(350px, 100%);
-  aspect-ratio: 9 / 19.5; /* phone-ish */
+  width: min(320px, 100%);
+  aspect-ratio: 9.6 / 19; /* phone-ish */
   position: relative;
   border-radius: 44px;
-  padding: 9px;
+  padding: 8px;
   background: linear-gradient(180deg, rgba(0,0,0,0.78), rgba(0,0,0,0.92));
   box-shadow:
     0 30px 90px rgba(0,0,0,0.28),
