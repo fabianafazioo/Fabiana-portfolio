@@ -1,0 +1,151 @@
+.chatfab{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 99999;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.chatfab-panel{
+  width: 360px;
+  max-width: calc(100vw - 36px);
+  height: 520px;
+  max-height: calc(100vh - 36px);
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.chatfab-header{
+  padding: 12px 14px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.chatfab-title{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 900;
+  color: #000;
+}
+
+.chatfab-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(124,58,237,0.95), rgba(6,182,212,0.55));
+  box-shadow: 0 0 0 6px rgba(124,58,237,0.12);
+}
+
+.chatfab-iconbtn{
+  width: 36px;
+  height: 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.7);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.chatfab-body{
+  padding: 14px;
+  overflow: auto;
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatfab-msg{
+  display:flex;
+}
+
+.chatfab-msg.is-user{
+  justify-content: flex-end;
+}
+
+.chatfab-bubble{
+  max-width: 86%;
+  padding: 10px 12px;
+  border-radius: 16px;
+  line-height: 1.35;
+  font-size: 13.5px;
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.80);
+}
+
+.chatfab-msg.is-user .chatfab-bubble{
+  background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(6,182,212,0.12));
+  border: 1px solid rgba(124,58,237,0.18);
+}
+
+.chatfab-typing{
+  opacity: 0.75;
+}
+
+.chatfab-inputbar{
+  padding: 12px;
+  display:flex;
+  gap: 10px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.75);
+}
+
+.chatfab-inputbar textarea{
+  flex: 1;
+  resize: none;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.10);
+  padding: 10px 12px;
+  outline: none;
+  font-size: 13.5px;
+  background: rgba(255,255,255,0.85);
+  color: #000;
+}
+
+.chatfab-send{
+  border: none;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #06b6d4, #7c3aed);
+}
+
+.chatfab-send:disabled{
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.chatfab-mini{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 14px;
+  border-radius: 999px;
+
+  color: white;
+  font-weight: 900;
+  background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+}
+
+.chatfab-mini span{
+  font-size: 13px;
+  white-space: nowrap;
+}
