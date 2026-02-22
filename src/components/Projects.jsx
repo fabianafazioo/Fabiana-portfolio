@@ -148,7 +148,7 @@ export default function Projects() {
           <div className="project-info">
             <h4>DESCRIPTION</h4>
             <p>
-              Fluid Simulation Recreation Study created in Blender (then tested in a
+              Fluid Simulation Study created in Blender (then tested in a
               real-time pipeline). This was an experimental demo to practice water
               dynamics, surface shading, and simulation parameter tuning. Recreation and results are my
               own technical study.
@@ -174,7 +174,7 @@ export default function Projects() {
 
           {/* RIGHT ACTIONS */}
           <div className="project-actions">
-            <h3>Fluid Simulation Study</h3>
+            <h3>Fluid Simulation</h3>
             <p className="project-role">Blender Water Dynamics</p>
 
             <a
