@@ -104,6 +104,7 @@ export default function About() {
                     <strong>B.S. — Computational Science & Engineering</strong>
                   </div>
                   <div className="edu-sub">Minor: Mathematical Science</div>
+                  <div className="edu-sub">GPA: 3.82 / 4.0</div>
                 </div>
               </div>
 
