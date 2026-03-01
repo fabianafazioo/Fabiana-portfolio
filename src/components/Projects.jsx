@@ -187,6 +187,85 @@ export default function Projects() {
             </a>
           </div>
         </div>
+
+        {/* ===========================
+    PROJECT 3: CRYSTALLINE (GAME)
+   =========================== */}
+      <div className="project-showcase">
+          {/* LEFT INFO */}
+          <div className="project-info">
+            <h4>DESCRIPTION</h4>
+            <p>
+              Crystalline is a browser-based match-3 puzzle game that combines gem-combo scoring with
+              an AI trivia quiz system. Match “Rune Gems” to trigger a multiple-choice question based on
+              your chosen topic—correct answers award bonus points and extra moves.
+            </p>
+
+            <div className="tech-stack">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Canvas API</span>
+              <span>Vercel</span>
+              <span>Serverless Functions</span>
+              <span>OpenAI API</span>
+              <span>GitHub</span>
+            </div>
+
+            <p className="project-note">
+              <strong>Highlights:</strong> 8 levels, frequent Rune Gem quiz events, and a fallback question
+              bank so the game can still run if the API is unavailable.
+            </p>
+          </div>
+
+          {/* CENTER: Desktop/Laptop frame with interactive demo */}
+          <div className="project-media">
+            <div className="desktop-frame" aria-label="Crystalline embedded demo">
+              <div className="desktop-topbar">
+                <div className="desktop-dots" aria-hidden="true">
+                  <span className="desktop-dot" />
+                  <span className="desktop-dot" />
+                  <span className="desktop-dot" />
+                </div>
+                <div className="desktop-title">crystal-line.vercel.app</div>
+              </div>
+
+              <div className="desktop-screen">
+                <iframe
+                  title="Crystalline Embedded Demo"
+                  src="https://crystal-line.vercel.app"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  allow="fullscreen"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT ACTIONS */}
+          <div className="project-actions">
+            <h3>Crystalline</h3>
+            <p className="project-role">Match-3 Puzzle + AI Trivia Game</p>
+
+            <a
+              href="https://crystal-line.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              className="live-btn"
+            >
+              Live Demo ↗
+            </a>
+
+            <a
+              href="https://github.com/fabianafazioo/Crystal_Line.git"   // <-- replace with your repo link
+              target="_blank"
+              rel="noreferrer"
+              className="git-btn"
+            >
+              Git Repository ↗
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
