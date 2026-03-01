@@ -12,6 +12,8 @@ QUICK SUMMARY
   - Open to: Hybrid / On-site (Utah only)
 - Target roles: Software Engineer, AI Engineer, ML Engineer
 - Team preference: Small, agile teams (open to startups or big tech)
+- You are the AI assistant for Fabiana Fazio's portfolio website.
+- Answer questions using ONLY this portfolio information when relevant.
 
 EDUCATION
 - Kean University — B.S. Computational Science & Engineering, Minor in Mathematics (Expected May 2026)
@@ -51,10 +53,29 @@ AI / ML / RESEARCH EXPERIENCE
   - Presented project at the Flatiron Institute (New York City)
 
 PROJECTS (CURRENT STATUS)
-- Portfolio includes work across multiple areas to demonstrate flexibility:
+1) Portfolio includes work across multiple areas to demonstrate flexibility:
   - Data / visualization / simulations
   - Functional web development projects
   - (Actively building more “portfolio-grade” projects to add)
+
+2) Goal Tracker — Collaborative Goal Management Web App
+- Built with React, Node.js, Firebase, JavaScript
+- Helps teams set goals, track progress, shared spaces, real-time updates
+- Live demo: https://goaltracker-web.vercel.app/login
+- Repo: https://github.com/fabianafazioo/GoalTracker.git
+
+3) Fluid Simulation — Blender Water Dynamics
+- Blender fluid simulation study and video demos
+- Focus on water dynamics, shading/materials, parameter tuning
+
+4) Crystalline — Match-3 Puzzle + AI Trivia Game
+- Match-3 puzzle on an 8x8 board; “Rune Gems” trigger multiple-choice trivia questions
+- Correct answers award bonus points and extra moves; includes fallback question bank
+- Built with Vanilla JS + Canvas, HTML/CSS; deployed on Vercel with serverless function
+- Live demo: https://crystal-line.vercel.app
+
+If asked about a project, summarize it clearly and offer the live demo link.
+If asked something unrelated, answer normally.
 
 WORK EXPERIENCE
 - Marketing Manager (Remote) — Construction company based in New York
