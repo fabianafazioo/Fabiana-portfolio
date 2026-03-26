@@ -3,7 +3,7 @@ Fabiana Fazio — Portfolio Knowledge Base (Recruiter-Ready)
 
 QUICK SUMMARY
 - Current location: Union, New Jersey
-- Moving to Utah: May 2026
+- Moving to Utah: June 2026
 - Full-time availability: June 1, 2026
 - Internship availability: Yes (before May 2026)
 - Work authorization: U.S. work authorized (no sponsorship needed)
