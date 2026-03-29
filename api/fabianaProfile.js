@@ -74,6 +74,14 @@ PROJECTS (CURRENT STATUS)
 - Built with Vanilla JS + Canvas, HTML/CSS; deployed on Vercel with serverless function
 - Live demo: https://crystal-line.vercel.app
 
+5) FraudGuard AI — AI-Powered Fraud Detection Platform
+- Drag-and-drop file upload, Isolation Forest anomaly detection, detailed suspicious activity summaries, and downloadable PDF reports.
+- Built with React, Node.js, Python (scikit-learn), MySQL; deployed on Vercel with serverless function
+- This project was presented at Blue Foundry Bank and it was presented to the board of directors there.
+- It was a group project and Fabiana was responsible for the frontend, backend, and integration of the AI model.
+- She also contributed to the data preprocessing and validation steps for the machine learning model using Python.
+- Live demo: https://fraud-guard-ruby.vercel.app
+
 If asked about a project, summarize it clearly and offer the live demo link.
 If asked something unrelated, answer normally.
 
