@@ -266,6 +266,86 @@ export default function Projects() {
             </a>
           </div>
         </div>
+
+        {/* ===========================
+   PROJECT 4: FRAUDGUARD AI
+   =========================== */}
+<div className="project-showcase">
+        {/* LEFT INFO */}
+        <div className="project-info">
+          <h4>DESCRIPTION</h4>
+          <p>
+            FraudGuard AI is a web-based fraud detection platform that analyzes financial data from Excel,
+            CSV, and PDF files to identify suspicious activity. The system uses machine learning to detect
+            anomalies and provides clear summaries, risk insights, and visual results.
+          </p>
+
+          <div className="tech-stack">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>Pandas</span>
+            <span>JavaScript</span>
+            <span>Next.js</span>
+            <span>React</span>
+            <span>Vercel</span>
+            <span>GitHub</span>
+          </div>
+
+          <p className="project-note">
+            <strong>Highlights:</strong> Drag-and-drop file upload, Isolation Forest anomaly detection,
+            fraud risk percentage scoring, detailed suspicious activity summaries, and downloadable PDF reports.
+          </p>
+        </div>
+
+        {/* CENTER: Desktop/Laptop frame with interactive demo */}
+        <div className="project-media">
+          <div className="desktop-frame" aria-label="FraudGuard AI embedded demo">
+            <div className="desktop-topbar">
+              <div className="desktop-dots" aria-hidden="true">
+                <span className="desktop-dot" />
+                <span className="desktop-dot" />
+                <span className="desktop-dot" />
+              </div>
+              <div className="desktop-title">fraud-guard-ai.vercel.app</div>
+            </div>
+
+            <div className="desktop-screen">
+              <iframe
+                title="FraudGuard AI Embedded Demo"
+                src="https://fraud-guard-ai.vercel.app" // <-- replace with your real deployed link
+                loading="lazy"
+                referrerPolicy="no-referrer"
+                allow="fullscreen"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT ACTIONS */}
+        <div className="project-actions">
+          <h3>FraudGuard AI</h3>
+          <p className="project-role">AI-Powered Fraud Detection Platform</p>
+
+          <a
+            href="https://fraud-guard-ruby.vercel.app " 
+            target="_blank"
+            rel="noreferrer"
+            className="live-btn"
+          >
+            Live Demo ↗
+          </a>
+
+          <a
+            href="https://github.com/fabianafazioo/Fraud-Guard.git"
+            target="_blank"
+            rel="noreferrer"
+            className="git-btn"
+          >
+            Git Repository ↗
+          </a>
+        </div>
+      </div>
+
       </div>
     </section>
   );
