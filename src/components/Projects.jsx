@@ -292,8 +292,8 @@ export default function Projects() {
           </div>
 
           <p className="project-note">
-            <strong>Highlights:</strong> Drag-and-drop file upload, Isolation Forest anomaly detection,
-            fraud risk percentage scoring, detailed suspicious activity summaries, and downloadable PDF reports.
+            <strong>Highlights:</strong> Isolation Forest anomaly detection,
+            detailed suspicious activity summaries, and downloadable PDF reports.
           </p>
         </div>
 
@@ -312,7 +312,7 @@ export default function Projects() {
             <div className="desktop-screen">
               <iframe
                 title="FraudGuard AI Embedded Demo"
-                src="https://fraud-guard-ai.vercel.app" // <-- replace with your real deployed link
+                src="https://fraud-guard-ruby.vercel.app" 
                 loading="lazy"
                 referrerPolicy="no-referrer"
                 allow="fullscreen"
@@ -327,7 +327,7 @@ export default function Projects() {
           <p className="project-role">AI-Powered Fraud Detection Platform</p>
 
           <a
-            href="https://fraud-guard-ruby.vercel.app " 
+            href="https://fraud-guard-ruby.vercel.app" 
             target="_blank"
             rel="noreferrer"
             className="live-btn"
