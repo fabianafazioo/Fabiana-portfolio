@@ -1,10 +1,11 @@
 import "../styles/projects.css";
 import fluidVid1 from "../assets/fluid-demo.mp4";
 import fluidVid2 from "../assets/fluid-demo-2.mov";
+import fluidVid3 from "../assets/fluid-demo-3.mp4";
 import { useMemo, useState } from "react";
 
 function FluidVideoSlider() {
-  const videos = useMemo(() => [fluidVid1, fluidVid2], []);
+  const videos = useMemo(() => [fluidVid1, fluidVid2, fluidVid3], []);
   const [idx, setIdx] = useState(0);
 
   function prev() {
@@ -187,6 +188,7 @@ export default function Projects() {
             </a>
           </div>
         </div>
+        
 
         {/* ===========================
     PROJECT 3: CRYSTALLINE (GAME)
