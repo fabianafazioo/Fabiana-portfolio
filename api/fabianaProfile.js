@@ -67,6 +67,7 @@ PROJECTS (CURRENT STATUS)
 3) Fluid Simulation — Blender Water Dynamics
 - Blender fluid simulation study and video demos
 - Focus on water dynamics, shading/materials, parameter tuning
+- Created Elizabet River study simulation with real GIS data and satellite imagery for accurate terrain modeling
 
 4) Crystalline — Match-3 Puzzle + AI Trivia Game
 - Match-3 puzzle on an 8x8 board; “Rune Gems” trigger multiple-choice trivia questions
