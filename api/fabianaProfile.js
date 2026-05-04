@@ -83,6 +83,29 @@ PROJECTS (CURRENT STATUS)
 - She also contributed to the data preprocessing and validation steps for the machine learning model using Python.
 - Live demo: https://fraud-guard-ruby.vercel.app
 
+6) NexaHire — AI-Powered Job Application Tracker
+- Developed a full-stack web application designed to help job seekers manage applications and prepare for interviews using AI.
+- Built separate user experiences for job seekers and recruiters, enabling application tracking, candidate search, and direct communication.
+- Implemented features such as job tracking (Applied, Interview, Offer, Rejected), resume uploads, and profile management.
+- Integrated an AI-powered interview system that generates personalized questions, evaluates responses, and provides feedback.
+- Developed a real-time messaging system allowing recruiters to initiate conversations with candidates.
+- Built the frontend using Angular, TypeScript, HTML, and CSS, and the backend using Node.js and Express.js.
+- Used PostgreSQL (Neon) for database management, storing users, applications, messages, and resumes.
+- Deployed the system using Vercel (frontend), Render (backend), and Neon (database), ensuring full-stack integration.
+- Focused on accessibility and user-friendly design, applying SESMag principles to support users with different experience levels.
+- Live Demo: https://nexa-hire-one.vercel.app
+
+7) Aura Alignment — Smart Posture Product Website
+- Designed and developed a full product website for a smart posture device that uses vibration feedback to improve posture habits.
+- Created a complete user experience including landing page, product showcase, and checkout flow.
+- Conceptualized integration with a companion app that tracks posture progress and builds long-term habits.
+- Focused on clean UI/UX design and responsive layout, ensuring functionality across desktop and mobile devices.
+- Built interactive components using JavaScript, HTML, and CSS.
+- Developed the site with an emphasis on real-world product presentation and conversion-focused design.
+- Deployed the application using Vercel and managed version control with GitHub.
+-Demonstrates skills in frontend development, product thinking, and user-centered design.
+- Live Demo: https://aura-alignment-sigma.vercel.app
+
 If asked about a project, summarize it clearly and offer the live demo link.
 If asked something unrelated, answer normally.
 
