@@ -308,7 +308,7 @@ export default function Projects() {
                 <span className="desktop-dot" />
                 <span className="desktop-dot" />
               </div>
-              <div className="desktop-title">fraud-guard-ai.vercel.app</div>
+              <div className="desktop-title">fraud-guard-ruby.vercel.app</div>
             </div>
 
             <div className="desktop-screen">
