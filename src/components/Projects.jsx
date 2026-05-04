@@ -376,7 +376,7 @@ export default function Projects() {
 
         <p className="project-note">
           <strong>Highlights:</strong> AI interview practice, resume-based feedback,
-          job tracking, recruiter search, real-time messaging, and full-stack deployment.
+          recruiter search, and real-time messaging.
         </p>
       </div>
 
