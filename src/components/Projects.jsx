@@ -429,6 +429,87 @@ export default function Projects() {
       </div>
     </div>
 
+      {/* ===========================
+      PROJECT 6: AURA ALIGNMENT
+      =========================== */}
+    <div className="project-showcase">
+      {/* LEFT INFO */}
+      <div className="project-info">
+        <h4>DESCRIPTION</h4>
+        <p>
+          Aura Alignment is a product-focused website for a smart posture device that helps
+          users improve posture through gentle vibration reminders. The device connects to a
+          companion app where users can track their progress, build better habits, and stay
+          consistent with their posture goals.
+        </p>
+
+        <div className="tech-stack">
+          <span>JavaScript</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Vercel</span>
+          <span>GitHub</span>
+          <span>Product Website</span>
+          <span>Checkout Page</span>
+        </div>
+
+        <p className="project-note">
+          <strong>Highlights:</strong> Full product landing page, app-connected device concept,
+          posture progress tracking, checkout flow, responsive design, and polished user experience.
+        </p>
+      </div>
+
+      {/* CENTER: Desktop/Laptop frame with interactive demo */}
+      <div className="project-media">
+        <div className="desktop-frame" aria-label="Aura Alignment embedded demo">
+          <div className="desktop-topbar">
+            <div className="desktop-dots" aria-hidden="true">
+              <span className="desktop-dot" />
+              <span className="desktop-dot" />
+              <span className="desktop-dot" />
+            </div>
+            <div className="desktop-title">aura-alignment-sigma.vercel.app</div>
+          </div>
+
+          <div className="desktop-screen">
+            <iframe
+              title="Aura Alignment Embedded Demo"
+              src="https://aura-alignment-sigma.vercel.app"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              allow="fullscreen"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT ACTIONS */}
+      <div className="project-actions">
+        <h3>Aura Alignment</h3>
+        <p className="project-role">Smart Posture Product Website</p>
+
+        <a
+          href="https://aura-alignment-sigma.vercel.app"
+          target="_blank"
+          rel="noreferrer"
+          className="live-btn"
+        >
+          Live Demo ↗
+        </a>
+
+        <a
+          href="https://github.com/fabianafazioo/Aura_Alignment.git"
+          target="_blank"
+          rel="noreferrer"
+          className="git-btn"
+        >
+          Git Repository ↗
+        </a>
+      </div>
+    </div>
+
+
+    
       </div>
     </section>
   );
