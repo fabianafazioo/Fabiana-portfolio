@@ -347,6 +347,87 @@ export default function Projects() {
           </a>
         </div>
       </div>
+          {/* ===========================
+      PROJECT 5: NEXAHIRE
+      =========================== */}
+    <div className="project-showcase">
+      {/* LEFT INFO */}
+      <div className="project-info">
+        <h4>DESCRIPTION</h4>
+        <p>
+          NexaHire is an AI-powered job application tracker designed to help job seekers
+          manage applications, upload resumes, prepare for interviews, and communicate
+          with recruiters. The platform also gives recruiters tools to search candidates,
+          view profiles, save favorites, and message job seekers directly.
+        </p>
+
+        <div className="tech-stack">
+          <span>Angular</span>
+          <span>TypeScript</span>
+          <span>HTML/CSS</span>
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>PostgreSQL</span>
+          <span>Neon</span>
+          <span>Render</span>
+          <span>Vercel</span>
+          <span>AI Integration</span>
+        </div>
+
+        <p className="project-note">
+          <strong>Highlights:</strong> AI interview practice, resume-based feedback,
+          job tracking, recruiter search, real-time messaging, and full-stack deployment.
+        </p>
+      </div>
+
+      {/* CENTER: Desktop/Laptop frame with interactive demo */}
+      <div className="project-media">
+        <div className="desktop-frame" aria-label="NexaHire embedded demo">
+          <div className="desktop-topbar">
+            <div className="desktop-dots" aria-hidden="true">
+              <span className="desktop-dot" />
+              <span className="desktop-dot" />
+              <span className="desktop-dot" />
+            </div>
+            <div className="desktop-title">nexa-hire-one.vercel.app</div>
+          </div>
+
+          <div className="desktop-screen">
+            <iframe
+              title="NexaHire Embedded Demo"
+              src="https://nexa-hire-one.vercel.app"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              allow="fullscreen"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT ACTIONS */}
+      <div className="project-actions">
+        <h3>NexaHire</h3>
+        <p className="project-role">AI-Powered Job Application Tracker</p>
+
+        <a
+          href="https://nexa-hire-one.vercel.app"
+          target="_blank"
+          rel="noreferrer"
+          className="live-btn"
+        >
+          Live Demo ↗
+        </a>
+
+        <a
+          href="https://github.com/fabianafazioo/Nexa-Hire.git"
+          target="_blank"
+          rel="noreferrer"
+          className="git-btn"
+        >
+          Git Repository ↗
+        </a>
+      </div>
+    </div>
 
       </div>
     </section>
