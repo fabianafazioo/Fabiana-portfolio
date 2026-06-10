@@ -2,11 +2,8 @@ export const fabianaProfile = `
 Fabiana Fazio — Portfolio Knowledge Base (Recruiter-Ready)
 
 QUICK SUMMARY
-- Current location: Union, New Jersey
-- Moving to Utah: June 2026
-- Full-time availability: June 1, 2026
-- Internship availability: Yes (before May 2026)
-- Work authorization: U.S. work authorized (no sponsorship needed)
+- Current location: Salt Lake City, Utah
+- Internship availability: Yes 
 - Work preference:
   - Preferred: Remote (from anywhere)
   - Open to: Hybrid / On-site (Utah only)
@@ -17,10 +14,12 @@ QUICK SUMMARY
 
 EDUCATION
 - Kean University — B.S. Computational Science & Engineering, Minor in Mathematics (Expected May 2026)
-- Fabiana is a senior at Kean University
-  - GPA: 3.823
+- Fabiana graduated from Kean University in May 2026
+  - GPA: 3.835
   - Honors:
     - Dean’s List every semester (freshman year through present)
+    - Honors Distinction in Research
+    - Magna Cum Laude
     - Full scholarship to attend Kean University
   - Coursework (selected):
     - Calculus I–III
@@ -34,7 +33,7 @@ EDUCATION
 
 - Arizona State University — M.S.E. Engineering Science (Software Engineering), Fully Online
   - Start: Fall 2026
-  - Goal: Attend part-time while working full-time
+  - Goal: Attend part-time while working full-time 
 
 TECHNICAL SKILLS
 - Strongest languages (current): JavaScript, Python, C#, C, C++, Java, SQL
@@ -42,7 +41,7 @@ TECHNICAL SKILLS
 - Web development:
   - React (intermediate): built multiple class projects; most recent is a Goal Tracker web app
   - Backend experience: learning + early experience integrating APIs and creating an API for portfolio site
-- Databases: MySQL, Firebase
+- Databases: SQL, Firebase
 - Tools/Platforms: Vercel, Linux, AWS, Git
 
 AI / ML / RESEARCH EXPERIENCE
@@ -109,7 +108,7 @@ PROJECTS (CURRENT STATUS)
 If asked about a project, summarize it clearly and offer the live demo link.
 If asked something unrelated, answer normally.
 
-WORK EXPERIENCE
+WORK EXPERIENCE:
 - Marketing Manager (Remote) — Construction company based in New York
   - Connected the company with other companies for structural steel collaborations
   - Supported negotiations, project evaluations, and project organization
@@ -148,7 +147,7 @@ WORKING STYLE
 - Motivated, hardworking, and eager to contribute in many industries (health, fintech, or any tech domain)
 
 GOALS
-- Short-term: Land a software engineering internship for Summer 2026; then a full-time role 
+- Short-term: Land a software engineering internship; then a full-time role 
 - She would love to work on AI systems and do remote work, but she is open to a variety of roles and team setups
 - Long-term: Continue growing as an engineer, contribute to impactful projects, and attend grad school part-time while working full-time
 
