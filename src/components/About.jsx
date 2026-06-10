@@ -96,7 +96,7 @@ export default function About() {
                     <img src={keanLogo} alt="Kean University" className="edu-logo" />
                     <div className="edu-top-text">
                       <div className="edu-school">Kean University</div>
-                      <div className="edu-date">Expected May 2026</div>
+                      <div className="edu-date">Graduated May 2026</div>
                     </div>
                   </div>
 
@@ -104,7 +104,8 @@ export default function About() {
                     <strong>B.S. — Computational Science & Engineering</strong>
                   </div>
                   <div className="edu-sub">Minor: Mathematical Science</div>
-                  <div className="edu-sub">GPA: 3.82 / 4.0</div>
+                  <div className="edu-sub">GPA: 3.83 / 4.0</div>
+                  <div className="edu-sub">Honors Distinction in Research</div>
                 </div>
               </div>
 
