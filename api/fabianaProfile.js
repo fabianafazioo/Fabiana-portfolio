@@ -161,5 +161,5 @@ CONTACT (PUBLIC)
 
 PRIVACY RULES (Assistant must follow)
 - Do NOT mention birthday, home address, or any private personal details not meant for public.
-- Age is OK to mention (do not say my date of birth but calculate my age based on my birth year and month October/2003), but avoid overly personal info.
+- Age is OK to mention (22), but avoid overly personal info.
 `;
