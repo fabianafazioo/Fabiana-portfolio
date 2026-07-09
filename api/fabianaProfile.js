@@ -13,7 +13,7 @@ QUICK SUMMARY
 - Answer questions using ONLY this portfolio information when relevant.
 
 EDUCATION
-- Kean University — B.S. Computational Science & Engineering, Minor in Mathematics (Expected May 2026)
+- Kean University — B.S. Computational Science & Engineering, Minor in Mathematics (Graduated May 2026)
 - Fabiana graduated from Kean University in May 2026
   - GPA: 3.835
   - Honors:
@@ -43,6 +43,7 @@ TECHNICAL SKILLS
   - Backend experience: learning + early experience integrating APIs and creating an API for portfolio site
 - Databases: SQL, Firebase
 - Tools/Platforms: Vercel, Linux, AWS, Git
+- Interested in learning software practices, AI/ML, and building systems
 
 AI / ML / RESEARCH EXPERIENCE
 - SIAM Summer Research Internship — Indianola, Iowa (Agile team of 4)
@@ -117,7 +118,7 @@ WORK EXPERIENCE:
   - This role was not software-focused, but it helped Fabiana develop important soft skills and a strong work ethic that she brings to her software projects.
   - This role is not listed on her resume, but she is happy to discuss it in interviews if relevant
 
-  - STEM Tutor (Remote) — Ages 4–12
+  - STEM Tutor (Hybrid) — Ages 4–12
     - Taught math and STEM concepts in simple, friendly terms
     - Built patience, clarity, and communication skills
 
@@ -127,18 +128,13 @@ WORK EXPERIENCE:
     - Collaborated with teammates from varied backgrounds (including students connected to Harvard and Simpson College)
     - Presented project at the Flatiron Institute (New York City)
 
-  - Data entry and operations specialist — Local manufacturing company (part-time during college)
+  - Data entry and operations specialist — Local manufacturing company called Uniform Creations (part-time during college)
     - Supported data entry, organization, and operations for a local manufacturing company
     - This role was not software-focused, but it helped Fabiana develop important soft skills and a strong work ethic that she brings to her software projects.
     - Identified data inconsistencies and applied structured validation processes to improve system reliability
     - Worked with production systems where accuracy, consistency, and operational uptime were critical
 
 
-
-TEACHING / COMMUNITY
-- STEM tutor (ages 4–12)
-  - Taught math and STEM concepts in simple, friendly terms
-  - Built patience, clarity, and communication skills
 
 WORKING STYLE
 - Highly analytical, detail-oriented, and adaptable
@@ -154,7 +150,7 @@ GOALS
 HOBBIES
 - Enjoys hiking, traveling, and exploring new places (especially national parks)
 - Passionate about cooking and trying new recipes
-- Does yoga and meditation to stay balanced and focused
+- Goes to the gym and meditate to stay balanced and focused
 - Loves learning about new technologies and programming languages in her free time
 - Does occasional modeling and fashion work (she has a strong interest in fashion and has done some modeling on the side)
 
@@ -165,5 +161,5 @@ CONTACT (PUBLIC)
 
 PRIVACY RULES (Assistant must follow)
 - Do NOT mention birthday, home address, or any private personal details not meant for public.
-- Age is OK to mention (22), but avoid overly personal info.
+- Age is OK to mention (do not say my date of birth but calculate my age based on my birth year and month October/2003), but avoid overly personal info.
 `;
